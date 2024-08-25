@@ -51,7 +51,7 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 2. **Créer le dossier data à la racine. Le fichier database.db sera crée automatiquement après**
 
 3. **Lancez le serveur dans le terminal avec la commande** :
-    php -S localhost:8000 -t public
+    php -S localhost:8000
 
 3. **Naviguer à l'URL : http://localhost:8000//seedmyproject/autorize/true pour créer le fichier database.db et faire le seed de la base de donnée.**
 

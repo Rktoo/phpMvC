@@ -4,12 +4,12 @@
 function setupDatase()
 {
     if (!file_exists(DB_PATH)) {
-        echo "En cours de création de la base de donnée fictive.<br/>";
+        print("En cours de création de la base de donnée fictive.");
         $db = new PDO("sqlite:" . DB_PATH);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         try {
-            echo "En cours de création des tables.<br/>";
+            printf("En cours de création des tables.");
 
             $db->exec("CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,7 +29,7 @@ function setupDatase()
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )");
 
-            echo "Création de la base de donnée et des tables réussie.";
+            print("Création de la base de donnée et des tables réussie.");
         } catch (PDOException $e) {
             echo "Erreur sur le setup de la base de donnée : " . $e->getMessage() . "<br/>";
         }

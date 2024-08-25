@@ -39,18 +39,9 @@ try {
         ]);
     }
 
-
-
-    // for ($i = 0; $i < 50; $i++) {
-    //     $stmt->execute([
-    //         ":name" => $faker->colorName(),
-    //         ":description" => $faker->realTextBetween(150, 250),
-    //         ":prix" => $faker->randomFloat(2, 0, 200),
-    //         ":created_at" => $faker->dateTimeBetween("-1 year")->getTimestamp(),
-    //     ]);
-    // }
-
-    echo "Seed terminé avec succès.";
+    print("Seed terminé avec succès.");
+    usleep(400000);
+    header("location: /");
 } catch (PDOException $e) {
     die("Erreur sur les insertions fictives : " . $e->getMessage());
 }
