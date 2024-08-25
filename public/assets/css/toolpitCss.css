@@ -1,0 +1,40 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(46, 46, 46);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 5;
+    bottom: 1.55rem;
+    /* Place la bulle au-dessus */
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@media screen and (max-width: 740px) {
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.inactive:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(194, 194, 194);
+}
+
+.inactive:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(176, 176, 176);
+}
