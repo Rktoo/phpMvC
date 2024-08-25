@@ -23,20 +23,20 @@
             <h1>Historique</h1>
         </div>
         <div class="flex flex-col justify-center items-center text-xs cursor-pointer text-slate-400 hover:text-white" id="_menuParam">
-            <h1>Paramètre</h1>
+            <h1>Paramètres</h1>
         </div>
 <?php } elseif($uri === "/profil/remove-account") {?>
               <div class="flex flex-col justify-center items-center text-xs cursor-pointer text-slate-400 " id="">
             <h1 class="hover:text-white ">Etape de suppression</h1>
             <div class="mt-2" >
                 <div class="hover:text-white text-slate-400" id="_et1">
-                    <span>Etape 1</span>
+                    <span>Étape 1</span>
                 </div>
                 <div class="flex justify-center items-center my-2">
                     <span class="scale-y-150">|</span>
                 </div>
                 <div class="hover:text-white text-slate-400" id="_et2">
-                    <span>Etape 2</span>
+                    <span>Étape 2</span>
                 </div>
             </div>
         </div>
