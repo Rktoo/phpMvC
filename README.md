@@ -42,9 +42,8 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 1. **Créer un fichier .env à la racine du projet et renseignez le chemin de la base de donnée** :
     ```bach
     touch .env
-
 **Dans le fichier .env insérez ces lignes**
-    ```
+    ```bach
     PROJECT_NAME="phpMvc2024"
     DB_PATH="/data/database.db"
 
