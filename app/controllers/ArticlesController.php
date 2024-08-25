@@ -30,9 +30,8 @@ class ArticlesController extends Controller
         $page = min($page, $totalPages);
 
         if (isset($_POST["search"])) {
-            $name = $_POST["search"];
+            $name = htmlspecialchars($_POST["search"]);
             $articles = $this->model->getArticleLike($name);
-
             if ($articles) {
                 return $this->view("article/index", [
                     "articles" => $articles,

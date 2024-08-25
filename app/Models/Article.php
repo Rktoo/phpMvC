@@ -51,6 +51,6 @@ class Article
         $query = $this->db->prepare("SELECT * FROM articles where name LIKE :name");
         $query->bindParam(":name", $name, \PDO::PARAM_STR);
         $query->execute();
-        return $query->fetch(\PDO::FETCH_ASSOC);
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

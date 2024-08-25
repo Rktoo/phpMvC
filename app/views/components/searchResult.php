@@ -15,7 +15,7 @@ ob_start();
     <div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-2 md:gap-4 lg:gap-6">
                 <?php
-                foreach([$articles] as $article){
+                foreach($articles as $article){
                     if(!$article["name"]){ 
                         return;
                     } else {

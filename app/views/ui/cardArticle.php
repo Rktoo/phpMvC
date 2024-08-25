@@ -1,6 +1,9 @@
 <?php
 
-$classHoverGroup = "group-hover:scale-125 transition-all duration-200 ease-in-out group-hover:rounded-lg group-hover:border-4 group-hover:border-amber-400 group-hover:translate-y-8";
+$classHoverGroup = " transition-all duration-200 ease-in-out ";
+if((int)$article["stock"] > 0){
+    $classHoverGroup .= " group-hover:scale-125 group-hover:rounded-lg group-hover:border-4 group-hover:border-amber-400 group-hover:translate-y-8";
+}
 
 ?>
 
