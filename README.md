@@ -36,18 +36,21 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 2. **Installer les dépendances nécessaires** :
     ```bash
     composer install
+    npm install
 
 ## Configuration
 1. **Créer un fichier .env à la racine du projet et renseignez le chemin de la base de donnée** :
     ```bach
     touch .env
 
-PROJECT_NAME="phpMvc2024"
-DB_PATH="/data/database.db"
+**Dans le fichier .env insérez ces lignes**
+    ```
+    PROJECT_NAME="phpMvc2024"
+    DB_PATH="/data/database.db"
 
 2. **Créer le dossier data à la racine. Le fichier database.db sera crée automatiquement après**
 
-3. **Lancez le serveur** :
+3. **Lancez le serveur dans le terminal avec la commande** :
     php -S localhost:8000 -t public
 
 3. **Naviguer à l'URL : http://localhost:8000//seedmyproject/autorize/true pour créer le fichier database.db et faire le seed de la base de donnée.**
