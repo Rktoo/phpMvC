@@ -63,6 +63,13 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 3. **Faites vos modifications et commitez-les et poussez les sur votre fork**
 4. **Ouvrez une Pull Request sur GitHut.**
 
+## Crédits
+### Icônes :
+- **vectorsmarket15**
+- **smashingstocks**
+### Images : 
+- **Images sous droits d'auteur** : Les images utilisées dans ce projet sont protégées par des droits d'auteur. Merci de ne pas les réutiliser sans autorisation.
+
 ## LICENCE
 1. **Ce projet est sous la licent MIT.**
 
