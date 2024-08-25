@@ -1,7 +1,11 @@
 <?php
 ob_start();
 $btnClass = "font-normal text-white my-2 mx-auto px-4 py-1 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2";
-$paiementMethod = ["Visa", "Paypal", "Stripe"];
+$paiementMethod = [
+    "Visa" => "/public/images/paiement/visa.png", 
+    "MasterCard" => "/public/images/paiement/masterCard.png",
+    "Paypal" => "/public/images/paiement/paypal.png", 
+    "Stripe" => "/public/images/paiement/stripe.png"];
 ;
 
 ?>
@@ -10,7 +14,7 @@ $paiementMethod = ["Visa", "Paypal", "Stripe"];
     <div class="">
         <h1 class="text-2xl text-center font-semibold tracking-widest">Paiement</h1>
     </div>
-    <div class="relative min-w-[400px] min-h-[300px] border-2 rounded bg-slate-50 px-4 ">
+    <div class="relative min-w-[400px] min-h-[300px] border-2 rounded bg-slate-50 px-4 shadow-lg">
         <div class="mt-4">
             <h1 class="text-start font-semibold">Liste des produits</h1>
         </div>
@@ -29,7 +33,10 @@ $paiementMethod = ["Visa", "Paypal", "Stripe"];
                 foreach ($paiementMethod as $key => $pM) { ?>
                     <li id="<?= $key;?>" class="flex justify-between gap-2 w-full pr-2">
                         <label for="<?= $pM?>" class="w-[98%] cursor-pointer">
-                    <?= $pM  ?></label>
+                    <?= $key  ?></label>
+                    <div>
+                        <img src="<?= $pM ?>" alt="<?= $key ?>" class="w-12 h-10">
+                    </div>
                     <input type="radio" name="choix" id="<?= $pM?>" class="cursor-pointer" value="<?= $pM;?>">
                     </li>
                 <?php }
