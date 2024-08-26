@@ -18,7 +18,7 @@ $paramOptions = ["Modifier votre nom", "Changer votre mot de passe", "Supprimer 
     </section>
     <section class="w-72 h-auto md:w-80 lg:w-[30rem] rounded-xl bg-stone-800 shadow-xl text-white" id="_dasboardSectionParamContainer">
         <div class="flex flex-col gap-2 p-4">
-            <h1 class="" id="_dashboarSectionParamTitle">Paramètre</h1>
+            <h1 class="" id="_dashboarSectionParamTitle">Paramètres</h1>
             <p class="text-start font-thin text-xs underline underline-offset-2" id="_dashboardSectionParamParagraphe ">Gestion du profil</p>
             <ul class="text-xs text-slate-400">
                 <?php

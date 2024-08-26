@@ -122,7 +122,7 @@ function animateItem(item, keyframes, option) {
 }
 
 let i = 5
-export function counter(element, counT) {
+export function counter(element, counT, replace = "/login") {
     let count = createElement("p", counT, "text-center text-wrap font-thin");
     element.appendChild(count);
     setTimeout(() => {
@@ -133,7 +133,7 @@ export function counter(element, counT) {
         count.textContent = i;
         (i > 0) ? i-- : 0;
         if (i === 0) {
-            window.location.replace("/login");
+            window.location.replace(replace);
         }
 
     }, 1000)

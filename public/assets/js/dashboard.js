@@ -1,4 +1,4 @@
-import animateItem, { validation } from "./_auth.js";
+import animateItem, { counter, validation } from "./_auth.js";
 
 const sectionParam = document.querySelector("#_dasboardSectionParamContainer");
 const section = document.querySelector("#_dasboardSectionContainer");
@@ -153,8 +153,8 @@ if (formM && userNameModif || formP && userPassModif && userPassConfModif) {
         event.preventDefault();
         const uName = validation(userNameModif);
         const formData = new FormData(formM);
-        
-        if(uName){
+
+        if (uName) {
             fetch("/profil/edit-name", {
                 method: "POST",
                 body: formData,
@@ -166,11 +166,11 @@ if (formM && userNameModif || formP && userPassModif && userPassConfModif) {
                     if (data.success) {
                         div_.classList.add("text-green-600");
                         div_.style.color = "green";
-                        if(div_.textContent === data.message){
+                        if (div_.textContent === data.message) {
                             return;
                         }
                         div_.textContent = data.message;
-                        
+                        counter(div_, 4, "/profil");
                     } else {
                         div_.classList.add("text-red-600");
                         div_.textContent = "Erreur sur la soumission. " + data.error;
@@ -179,50 +179,57 @@ if (formM && userNameModif || formP && userPassModif && userPassConfModif) {
         }
     });
 
-formP.addEventListener("submit", function (event) {
+    formP.addEventListener("submit", function (event) {
 
-    event.preventDefault();
-    const valP = validation(userPassModif);
-    const valCP = validation(userPassConfModif);
-    if (valCP === true && valP === true && userPassModif.value === userPassConfModif.value) {
+        event.preventDefault();
+        const valP = validation(userPassModif);
+        const valCP = validation(userPassConfModif);
+        if (valCP === true && valP === true && userPassModif.value === userPassConfModif.value) {
             const formData = new FormData(formP);
             fetch("/profil/modifier-mot-de-passe", {
-                    method: "POST",
-                    body : formData
-                }).then(res => res.json()).then(data => {
-                    const div_ = document.createElement("div");
-                    userPassModif.textContent = userPassModif.value;
-                    titleEspaceClient.appendChild(div_);
-                    div_.classList.add("text-xs");
-                    div_.classList.add("font-thin");
-                    div_.classList.add("text-center");
-                        if(data.success){
-                            div_.classList.add("text-green-600");
-                            if (div_.textContent === data.message) {
-                                return;
-                            }
-                            div_.textContent = data.message;
-                        } else {
-                            div_.classList.add("text-red-600");
-                            div_.textContent = data.Error;
-                        }
-                    }).catch(err => console.error("Erreur sur la mise à jour du mot de passe : " + err));
-    } else if(userPassModif.value !== userPassConfModif.value) {
-        if(document.querySelector("#_erreur_mdp")){
-            return;
+                method: "POST",
+                body: formData
+            }).then(res => res.json()).then(data => {
+                const div_ = document.createElement("div");
+                userPassModif.textContent = userPassModif.value;
+                titleEspaceClient.appendChild(div_);
+                div_.classList.add("text-xs");
+                div_.classList.add("font-thin");
+                div_.classList.add("text-center");
+                if (data.success) {
+                    div_.classList.add("text-green-600");
+                    if (div_.textContent === data.message) {
+                        return;
+                    }
+                    div_.textContent = data.message;
+                    counter(div_, 4, "/profil");
+                } else {
+                    div_.classList.add("text-red-600");
+                    div_.textContent = data.Error;
+                    setTimeout(() => {
+                        div_.textContent = "";
+                        div_.remove();
+                    }, 1000)
+
+
+                }
+            }).catch(err => console.error("Erreur sur la mise à jour du mot de passe : " + err));
+        } else if (userPassModif.value !== userPassConfModif.value) {
+            if (document.querySelector("#_erreur_mdp")) {
+                return;
+            }
+            const div_ = document.createElement("div");
+            div_.textContent = "Les mots de passes ne correspondent pas.";
+            div_.classList.add("text-red-600");
+            div_.classList.add("font-thin");
+            div_.classList.add("text-xs");
+            div_.id = "_erreur_mdp";
+            titleEspaceClient.appendChild(div_);
+            setTimeout(() => {
+                div_.remove();
+            }, 4000)
         }
-        const div_ = document.createElement("div");
-        div_.textContent = "Les mots de passes ne correspondent pas.";
-        div_.classList.add("text-red-600");
-        div_.classList.add("font-thin");
-        div_.classList.add("text-xs");
-        div_.id = "_erreur_mdp";
-        titleEspaceClient.appendChild(div_);
-        setTimeout(() => {
-            div_.remove();
-        }, 4000)
-    }
-});
+    });
 
 
 }
@@ -251,7 +258,7 @@ const options = {
 
 if (removePrec || removeNext && et1 && et2) {
     et1.classList.replace("text-slate-400", "text-amber-400");
-    
+
     removePrec.addEventListener("click", function () {
         removeEtap2.animate(keyFramesRemove, options);
         setTimeout(() => {
@@ -300,25 +307,28 @@ if (removeEtap2) {
             /// REQUETE AJAX
 
             const formData = new FormData(removeEtap2);
-
             fetch("/profil/remove-account", {
                 method: "POST",
                 body: formData,
             }).then(response => response.json())
                 .then(data => {
+                    window.localStorage.removeItem("_iTem_");
+                    window.localStorage.removeItem("_show_Cart");
                     if (data.success) {
-                        window.localStorage.removeItem("_iTem_");
-                        window.localStorage.removeItem("_show_Cart");
+                        if (result.textContent === data.message) {
+                            return;
+                        }
                         result.classList.add("text-green-600");
                         result.style.color = "green";
-                        result.textContent = "Votre sera traité dans les plus brefs délais.";
-                        window.location.replace("/logout");
+                        result.textContent = data.message;
+                        counter(result, 4, "/logout");
+                        removePrec.parentElement.remove();
+                        
                     } else {
                         result.classList.add("text-red-600");
                         result.textContent = "Erreur sur la soumission. " + data.error;
                     }
                 }).catch(error => console.error("Erreur AJAX : ", error))
-
         }
     })
 }
