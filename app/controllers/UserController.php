@@ -48,8 +48,24 @@ class UserController extends Controller
             $_SESSION["uemail"] = $uemail;
             $_SESSION["ucreated"] = $ucreatedAt;
             $_SESSION["_token"] = random_int(987654321, 12345678987);
-            $_SESSION["loginSuccess"] = "Comment allez vous aujourd'hui ?";
 
+            
+            $messages = [
+    "Comment allez-vous aujourd'hui ?",
+    "Bienvenue ! Nous espérons que vous passez une bonne journée !",
+    "Ravi de vous revoir !",
+    "Bienvenue ! Que puis-je faire pour vous aujourd'hui ?",
+    "Bon retour ! Prêt pour de nouvelles aventures ?",
+    "Bonjour ! C’est un plaisir de vous revoir.",
+    "Bon retour parmi nous !",
+    "Salut ! Heureux de vous voir ici.",
+    "Bienvenue ! Quelles sont vos attentes pour aujourd'hui ?",
+    "Content de vous revoir !"
+];          
+
+            $random_number = random_int(0, count($messages) - 1);
+            $_SESSION["loginSuccess"] = $messages[$random_number];
+            
             header("location: /");
         } else {
             unset($_SESSION["loginSuccess"]);
@@ -138,6 +154,7 @@ class UserController extends Controller
             $userName = htmlspecialchars($_POST["user_nameM"]);
             $userEmail = htmlspecialchars($_POST["user_emailL1"]);
             $modif = $this->model->updateUserName($userName, $userEmail);
+
             if($modif){
             $_SESSION["user"] = $userName;
             echo json_encode(["success" => true, "message" => "Votre nom a bien été modifié."]);
@@ -157,6 +174,7 @@ class UserController extends Controller
             $newPass = htmlspecialchars($_POST["user_mdp"]);
             $email = htmlspecialchars($_POST["user_emailL2"]);
             $gotoUpdate = $this -> model -> updateUserPassword($email, $oldMdp, $newPass);
+
             if($gotoUpdate === false){
                 echo json_encode(["success" => false, "Error" => "Le mot de passe est incorrect."]);
                 exit(319);
@@ -172,6 +190,7 @@ class UserController extends Controller
     {
         if (isset($_POST["mdp_suppression"]) && isset($_POST["email_suppression"])) {
             $isUser = $this->model->verifyUserBeforeRemove(htmlspecialchars($_POST["mdp_suppression"]), htmlspecialchars($_POST["email_suppression"]));
+
             if ($isUser) {
                 $goToDelete = $this->model->removeAccount($_POST["email_suppression"]);
                 if ($goToDelete > 0) {
@@ -184,6 +203,7 @@ class UserController extends Controller
             } else {
                 echo json_encode(["success" => false, "error" => "Mot de passe invalide"]);
             }
+
         } else {
             return $this->view("dashboard/profil/remove-account/index");
         }

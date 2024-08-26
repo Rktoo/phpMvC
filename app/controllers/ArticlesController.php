@@ -52,7 +52,6 @@ class ArticlesController extends Controller
     public function showArticle($id)
     {
         $article = $this->model->getArticleById($id);
-        ($_SESSION["page"]);
         return $this->view("article/articleById/index", ["article" => $article, "lastPage" => $_SESSION["page"]]);
     }
 
