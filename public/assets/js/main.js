@@ -317,7 +317,7 @@ if (cartBtn) {
 
 function createModal() {
     if (window.user !== "_connecTed") {
-        modal += `<div class="fixed inset-0 flex justify-center items-center mx-auto bg-gradient-to-bl from-stone-800/70 to-slate-800/75 text-lg tracking-widest text-white font-thin" style="z-index:200" id="_theModal">
+        modal += `<div class="fixed inset-0 flex justify-center items-center mx-auto px-10 bg-gradient-to-bl from-stone-800/70 to-slate-800/75 text-lg tracking-widest text-white font-thin" style="z-index:200" id="_theModal">
         <div class="relative flex flex-col gap-4" style="z-index:200">
             <h1>Vous devez vous connecter afin de procéder au paiment de vos articles.</h1>
             <p class="text-sm flex flex-row gap-2">Vous serez redirigé dans <span id="_sec"></span>secondes</p>

@@ -12,8 +12,8 @@ ob_start();
                 <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre nom">
             </div>
             <div>
-                <label for="vat_number" class="block text-sm font-medium text-gray-700">Numéro VAT</label>
-                <input type="text" id="vat_number" name="vat_number" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre VAT">
+                <label for="tva_number" class="block text-sm font-medium text-gray-700">Numéro TAV</label>
+                <input type="text" id="tva_number" name="tva_number" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre numéro TVA">
             </div>
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
