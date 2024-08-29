@@ -46,13 +46,14 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
     ```bach
     PROJECT_NAME="phpMvc2024"
     DB_PATH="/data/database.db"
+3. **N'oubliez pas d'activer votre driver Sqlite dans votre php.ini** :
+    ```Ouvrez votre php.ini depuis votre dossier d'installation de PHP et décommenter les lignes extension=pdo_sqlite et extension=sqlite3
+4. **Créer le dossier data à la racine. Le fichier database.db sera crée automatiquement après**
 
-3. **Créer le dossier data à la racine. Le fichier database.db sera crée automatiquement après**
-
-4. **Lancez le serveur dans le terminal avec la commande** :
+5. **Lancez le serveur dans le terminal avec la commande** :
     php -S localhost:8000
 
-5. **Naviguer à l'URL : http://localhost:8000/seedmyproject/autorize/true pour créer le fichier database.db et faire le seed de la base de donnée.**
+6. **Naviguer à l'URL : http://localhost:8000/seedmyproject/autorize/true pour créer le fichier database.db et faire le seed de la base de donnée.**
 
 ## Utilisation
 1. **Vous aurez la possibilité de créer un compte et de le gérer**
