@@ -1,5 +1,7 @@
 # E-Commerce PHP MVC by Rkoot
 
+![Banner](public/image-banner.png)
+
 Bienvenue dans mon dépôt de **phpMvc2024** ! Ce projet est un exemple de mise en œuvre d'une application PHP, avec une structure simple pour le développement local.
 
 ## Table des matières
