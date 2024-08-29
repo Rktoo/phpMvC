@@ -1,4 +1,4 @@
-# E-Commerce PHP MVC by Rkoot
+# E-Commerce PHP MVC by Rktoo
 
 ![Banner](public/image-banner.png)
 
@@ -30,16 +30,13 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 ## Installation
 
 1. **Clonez le dépôt** :
-
    ```bash
    git clone https://github.com/Rktoo/phpMvC.git
    cd phpMvC
-
 2. **Installer les dépendances nécessaires** :
     ```bash
     composer install
     npm install
-
 ## Configuration
 1. **Créer un fichier .env à la racine du projet et renseignez le chemin de la base de donnée** :
     ```bach
@@ -49,7 +46,7 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
     PROJECT_NAME="phpMvc2024"
     DB_PATH="/data/database.db"
 3. **N'oubliez pas d'activer votre driver Sqlite dans votre php.ini** :
-    ```Ouvrez votre php.ini depuis votre dossier d'installation de PHP et décommenter les lignes extension=pdo_sqlite et extension=sqlite3
+    Ouvrez votre php.ini depuis votre dossier d'installation de PHP et décommenter les lignes extension=pdo_sqlite et extension=sqlite3
 4. **Créer le dossier data à la racine. Le fichier database.db sera crée automatiquement après**
 
 5. **Lancez le serveur dans le terminal avec la commande** :
