@@ -20,7 +20,7 @@ if ($uri === "/articles") {
     require_once "config/database.php";
 }
 
-# Pour faire le seed
+# Pour faire le seed suivre l'url : http://localhost:8000/seedmyproject/autorize/true
 if ($uri === "/seedmyproject/autorize/true") {
     require_once "lib/seed.php";
 }
