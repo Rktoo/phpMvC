@@ -13,7 +13,7 @@ ob_start();
                 class="w-28 h-20 md:w-40 md:h-24 shadow-2xl">
         </div>
         <?php 
-            if($_SESSION["loginError"]){
+            if(isset($_SESSION["loginError"])){
             echo '<div class="md:absolute md:top-4 md:left-10 text-center   text-xs mt-1 text-red-400" id="_log_Error"><p class=" text-red-400 "></p> '.htmlspecialchars($_SESSION["loginError"]).'</p></div>';}
 
             

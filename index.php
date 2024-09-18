@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require "vendor/autoload.php";
 define("DB_PATH", __DIR__ . "/data/database.db");
 

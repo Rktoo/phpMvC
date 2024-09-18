@@ -1,7 +1,10 @@
 <?php
+$user = null;
+$token = null;
+if (isset($_SESSION["user"]) && isset($_SESSION["_token"])){
 $user = $_SESSION["user"];
 $token = $_SESSION["_token"];
-
+}
 $base = BASE_URL;
 
 ?>
@@ -23,7 +26,7 @@ $base = BASE_URL;
 
     <?php include_once __DIR__ . "/ui/header.php"; 
     
-if($_SESSION["loginSuccess"]){
+if(isset($_SESSION["loginSuccess"])){
             echo '<div class="text-center   text-xs font-thin tracking-widest mt-6 text-green-400" id="_log_Success"><p class=" text-green-400 "></p> '.htmlspecialchars($_SESSION["loginSuccess"]).'</p>
             <p class=" text-slate-800 " id="_citation"></p>
             </div>';}

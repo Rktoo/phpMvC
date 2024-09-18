@@ -73,7 +73,7 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 - **Images sous droits d'auteur** : Les images utilisées dans ce projet sont protégées par des droits d'auteur. Merci de ne pas les réutiliser sans autorisation.
 
 ## LICENCE
-1. **Ce projet est sous la licent MIT.**
+1. **Ce projet est sous la licence MIT.**
 
 # Merci pour votre visite et bonne utilisation ! 
 

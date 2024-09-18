@@ -7,6 +7,7 @@ use app\controllers\HomeController\HomeController;
 use app\controllers\UsersController\UserController;
 use app\Models\Article\Article;
 use app\Models\User\User;
+use config\Database;
 
 class App
 {
@@ -21,7 +22,7 @@ class App
     public function __construct()
     {
         require_once __DIR__ . '/../config/database.php';
-        $this->db = $db;
+        // $this->db = $db;
 
         $url = $this->url = $this->parseUrl();
         $requestUri = $_SERVER['REQUEST_URI'];
@@ -85,7 +86,8 @@ class App
             if (!$this->paginate) {
                 $this->params = $url ? [$url] : [];
             }
-            if ($_SERVER['REQUEST_URI'] === '/articles' . '/' . $url[1]) {
+
+            if (isset($url[1]) && $_SERVER['REQUEST_URI'] === '/articles' . '/' . $url[1]) {
                 $this->method = 'showArticle';
             } elseif(strstr($_SERVER["REQUEST_URI"], "paiement/")){
                 $this->method = 'paiement';
@@ -141,7 +143,7 @@ class App
             $this->controller = new ArticlesController($model);
         } else if ($controllerName === "UserController") {
             require_once __DIR__ . "/../app/Models/User.php";
-            // global $db;
+            global $db;
             if (isset($this->url[1])) {
                 $model = new User($this->db);
             } else {

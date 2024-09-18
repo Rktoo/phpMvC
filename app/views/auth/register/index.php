@@ -11,7 +11,7 @@ ob_start();
             <img src="/public/images/articles/boitier_pc.avif" alt="image d'un boitier pc" class="w-20 h-20 md:w-40 md:h-40 shadow-2xl">
         </div>
        <?php 
-            if($_SESSION["registerSuccess"]){
+            if(isset($_SESSION["registerSuccess"])){
                 unset($_SESSION["registerError"]);
             echo '<div class="md:absolute md:top-4 md:left-10 text-center   text-xs mt-1" id="_success"><p class=" text-green-400 ">'.htmlspecialchars($_SESSION["registerSuccess"]).'</p></div>';}
             ?>
@@ -30,7 +30,7 @@ ob_start();
             <label for="ruser_email" class="block text-sm font-medium text-gray-700">Email</label>
             <input type="email" id="ruser_email" name="user_email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre adresse email">
             <?php 
-            if($_SESSION["registerError"]){
+            if(isset($_SESSION["registerError"])){
             echo '<div class="text-start md:text-center text-red-400 text-xs mt-1" id="_rError">'.htmlspecialchars($_SESSION["registerError"]).'</div>';}
             ?>
         </div>

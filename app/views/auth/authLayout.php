@@ -1,7 +1,10 @@
 <?php
+$user = null;
+$token = null;
+if (isset($_SESSION["user"]) && isset($_SESSION["_token"])){
 $user = $_SESSION["user"];
 $token = $_SESSION["_token"];
-
+}
 $base = BASE_URL;
 if($user || $token){
     header("location: {$base}");
