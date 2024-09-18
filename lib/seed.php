@@ -9,10 +9,36 @@ $faker = Faker\Factory::create("fr_FR");
 $data = $materielsInformatique;
 
 try {
-    $sql = "DELETE FROM users";
-    $db->exec($sql);
-    $sql = "DELETE FROM articles";
-    $db->exec($sql);
+    // Suppression de la table users pour la préparation au seeding
+    $db -> exec("DROP TABLE IF EXISTS users");
+    // Création de la table users si elle n'existe pas
+    $createUsersTable  = "CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        u_name VARCHAR(50) NOT NULL,
+        u_email VARCHAR(100) NOT NULL,
+        u_password VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+    $db->exec($createUsersTable);
+    
+    // Suppression de la table articles pour la préparation au seeding
+    $db -> exec("DROP TABLE IF EXISTS articles");
+    // Création de la table articles si elle n'existe pas
+    $createArticlesTable = "CREATE TABLE IF NOT EXISTS articles (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name VARCHAR(100) NOT NULL,
+        description TEXT NOT NULL,
+        prix DECIMAL(10, 2) NOT NULL,
+        stock INT NOT NULL,
+        image_url VARCHAR(255),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+    $db->exec($createArticlesTable);
+
+    // // Nettoyage des tables
+    // $db -> exec("DELETE FROM users");
+    // $db -> exec("DELETE FROM articles");
+
 
     $stmt = $db->prepare("INSERT INTO users (u_name, u_email, u_password, created_at) VALUES (:name, :email, :password, :created_at)");
 
