@@ -51,8 +51,13 @@ class ArticlesController extends Controller
 
     public function showArticle($id)
     {
-        $article = $this->model->getArticleById($id);
-        return $this->view("article/articleById/index", ["article" => $article, "lastPage" => $_SESSION["page"]]);
+        $article = $this->model->getArticleById($id[1]);
+        
+        if (isset($_SESSION["page"])){
+            return $this->view("article/articleById/index", ["article" => $article, "lastPage" => $_SESSION["page"]]);
+        } else {
+            return $this->view("article/articleById/index", ["article" => $article, "lastPage" => null]);
+        }
     }
 
     public function paiement()

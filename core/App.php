@@ -106,7 +106,6 @@ class App
             } elseif ($_SERVER["REQUEST_URI"] === "/profil/remove-account") {
                 $this->method = "deleteAccount";
             }
-
             call_user_func_array([$this->controller, $this->method], $this->params);
             unset($url);
             unset($error);
