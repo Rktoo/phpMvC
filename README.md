@@ -4,6 +4,8 @@
 
 Bienvenue dans mon dépôt de **phpMvc2024** ! Ce projet est un exemple de mise en œuvre d'une application PHP, avec une structure simple pour le développement local.
 
+**Visiter le site en ligne** : [http://4530369.scienceontheweb.net/](http://4530369.scienceontheweb.net/).
+
 ## Table des matières
 
 - [Description](#description)
@@ -11,7 +13,6 @@ Bienvenue dans mon dépôt de **phpMvc2024** ! Ce projet est un exemple de mise 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
 - [Licence](#licence)
 
 ## Description
@@ -58,12 +59,6 @@ Ceci constitue un moyen efficace pour s'initier au MVC.
 1. **Vous aurez la possibilité de créer un compte et de le gérer**
 2. **La création de compte n'est pas nécessaire pour la navigation, sauf si vous envisagez de payer vos articles**
 3. **Vous aurez aussi la possibilité de gérer votre compte dans votre espace client**
-## Contribuer
-1. **Forkez le dépôt.**
-2. **Créez une branche pour vos modifications** :
-#### git checkout -b ma-nouvelle-fonctionnalité
-3. **Faites vos modifications et commitez-les et poussez les sur votre fork**
-4. **Ouvrez une Pull Request sur GitHut.**
 
 ## Crédits
 ### Icônes :
