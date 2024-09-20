@@ -27,7 +27,7 @@ if (isset($_POST["search"])) {
         </div>
 
         <!-- Début de pagination -->
-        <div class="mt-6">
+        <div class="w-full mt-6">
             <?php require_once __DIR__ . "/../components/pagination.php"; ?>
         </div>
 
