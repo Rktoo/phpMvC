@@ -12,7 +12,7 @@ ob_start();
                 <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre nom">
             </div>
             <div>
-                <label for="tva_number" class="block text-sm font-medium text-gray-700">Numéro TAV</label>
+                <label for="tva_number" class="block text-sm font-medium text-gray-700">Numéro TVA</label>
                 <input type="text" id="tva_number" name="tva_number" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-2 px-2 outline-none py-1" placeholder="Votre numéro TVA">
             </div>
             <div>
