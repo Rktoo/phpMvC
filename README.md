@@ -4,7 +4,7 @@
 
 Bienvenue dans mon dépôt de **phpMvc2024** ! Ce projet est un exemple de mise en œuvre d'une application PHP, avec une structure simple pour le développement local.
 
-**Visiter le site en ligne** : [http://4530369.scienceontheweb.net/](http://4530369.scienceontheweb.net/).
+**Visiter le site en ligne** : Pour une meilleure expérience, visitez le site depuis un pc. [http://4530369.scienceontheweb.net/](http://4530369.scienceontheweb.net/).
 
 ## Table des matières
 
