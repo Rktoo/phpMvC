@@ -7,7 +7,7 @@ $randomNumber = random_int(1, 6);
 
 ?>
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+<div class="max-w-4xl mx-auto max-sm:px-2 sm:px-6 lg:px-8 ">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden border-2 rounded-tl-lg itemS" id="<?= $article["id"]; ?>">
         <div class="relative flex justify-center items-center">
             <img src="<?= BASE_URL . $article["image_url"]; ?>" alt="image <?= htmlspecialchars($article['name']) ?>" class="w-64 h-64 object-cover">
