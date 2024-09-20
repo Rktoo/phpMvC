@@ -963,6 +963,14 @@ video {
   width: 100%;
 }
 
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
 .min-w-\[400px\] {
   min-width: 400px;
 }
@@ -2042,6 +2050,28 @@ video {
 
 .group:active .group-active\:flex {
   display: flex;
+}
+
+@media not all and (min-width: 768px) {
+  .max-md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .max-md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .max-md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .max-md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 640px) {

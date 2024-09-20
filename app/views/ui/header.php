@@ -1,5 +1,5 @@
 <header class="w-full bg-cyan-600 text-white py-4 z-10">
-    <nav class="max-w-6xl mx-auto px-10 flex justify-between items-center">
+    <nav class="max-w-6xl mx-auto px-10 max-md:px-4 flex justify-between items-center">
         <div class="text-xl sm:text-2xl font-bold">
             <a href="/" class="group flex flex-col sm:flex-row items-center text-white hover:text-gray-200">
                 <div class="rotate-45 sm:rotate-[-45deg]">
@@ -7,7 +7,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l7 7 7-7M5 13l7 7 7-7"></path>
                     </svg>
                 </div>
-                <h1 class="tracking-widest">
+                <h1 class="tracking-widest max-md:text-sm">
                     Informa<span class="text-yellow-400">T</span>ik
                 </h1>
             </a>

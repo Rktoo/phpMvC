@@ -4,7 +4,7 @@ ob_start();
 
 ?>
 
-<section class="md:relative flex justify-between flex-col md:flex-row md:items-center bg-white p-6 rounded-lg shadow-md mb-8 border-2 px-4 py-2 w-[400px] md:w-[600px] md:h-80">
+<section class="md:relative flex justify-between flex-col md:flex-row md:items-center bg-white p-6 rounded-lg shadow-md mb-8 border-2 px-4 py-2 w-[320px] md:w-[600px] md:h-80">
     <div class=" md:w-1/2 flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden">
         <h2 class="text-center text-2xl font-semibold mb-4">Register</h2>
         <div class="relative w-full flex justify-center md:mr-10">
