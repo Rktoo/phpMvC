@@ -11,7 +11,7 @@ if (isset($_POST["search"])) {
             <h1 class="text-2xl font-medium">Articles</h1>
             <p class="max-sm:text-start">Bienvenue ! Découvrez notre sélection d'articles soigneusement choisis pour répondre à tous vos besoins. Parcourez, explorez, et laissez-vous inspirer !😊</p>
         </div>
-        <div class="w-full max-sm:flex max-sm:justify-center max-sm:px-4">
+        <div class="w-full max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:px-4">
             <?php require_once __DIR__ . "/../components/search.php"; ?>
         </div>
         <div>

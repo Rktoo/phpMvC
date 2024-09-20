@@ -1,4 +1,4 @@
-<div class="w-full my-4 max-sm:flex max-sm:flex-row max-sm:justify-start max-sm:items-start">
+<div class="w-full my-4 max-sm:flex max-sm:flex-row max-sm:justify-center max-sm:items-center">
     <div class="messageInput mb-2 text-center text-red-400 "></div>
     <form action="/articles" class="flex flex-row gap-2" method="post" id="formulaireDeRecherche">
         <label for="search"></label>
