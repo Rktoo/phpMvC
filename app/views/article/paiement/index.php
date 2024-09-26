@@ -9,12 +9,12 @@ $paiementMethod = [
 ];
 ?>
 
-<div class="flex flex-col gap-6 font-thin bg-cyan-500/80 p-8 rounded-lg shadow-lg max-w-3xl mx-auto my-8">
+<div class="flex flex-col gap-6 font-thin bg-cyan-500 p-6 rounded-lg shadow-lg max-w-3xl mx-auto my-8">
     <div class="text-center">
         <h1 class="text-3xl font-semibold text-white tracking-widest ">Paiement</h1>
     </div>
 
-    <div class="relative border-2 rounded-lg bg-white px-8 py-10 shadow-md">
+    <div class="relative border-2 rounded-lg bg-white p-6 py-10 shadow-md">
         <div class="mb-4">
             <h2 class="text-lg font-semibold text-gray-800">Liste des produits</h2>
         </div>
