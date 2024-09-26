@@ -1,13 +1,13 @@
 <?php
 
 $classHoverGroup = " transition-all duration-200 ease-in-out ";
-if((int)$article["stock"] > 0){
-    $classHoverGroup .= " group-hover:scale-125 group-hover:rounded-lg group-hover:border-4 group-hover:border-amber-400 group-hover:translate-y-8";
+if ((int)$article["stock"] > 0) {
+    $classHoverGroup .= " group-hover:scale-125 group-hover:rounded-lg group-hover:border-2 group-hover:border-amber-400 group-hover:translate-y-8";
 }
 
 ?>
 
-<div class=" relative grid grid-cols-1 border-4 rounded-tl-lg  <?= (int)($article["stock"]) < 1 ? "bg-gray-200" : ""; ?> itemS " id="<?= $article["id"]; ?>">
+<div class=" relative w-full h-full grid grid-cols-1 border-4 rounded-tl-lg bg-white  <?= (int)($article["stock"]) < 1 ? "bg-gray-200" : ""; ?> itemS " id="<?= $article["id"]; ?>">
     <?php
     if ((int)($article["stock"]) < 1) { ?>
         <div class="absolute bottom-0 left-6 rotate-6 bg-red-600/75 border-slate-200/75 border-8 w-[80%] h-[90%] flex justify-center items-center z-30">

@@ -15,7 +15,7 @@ if (isset($_POST["search"])) {
             <?php require_once __DIR__ . "/../components/search.php"; ?>
         </div>
         <div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-2 md:gap-4 lg:gap-6">
+            <div class="grid max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto justify-items-center items-center gap-2 md:gap-4 lg:gap-6">
                 <?php
                 if (isset($_SESSION["message"])) {
                 } else {
