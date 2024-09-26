@@ -9,12 +9,12 @@ $paiementMethod = [
 ];
 ?>
 
-<div class="flex flex-col gap-6 font-thin bg-gray-50 p-6 rounded-lg shadow-lg max-w-3xl mx-auto my-8">
+<div class="flex flex-col gap-6 font-thin bg-cyan-500/80 p-8 rounded-lg shadow-lg max-w-3xl mx-auto my-8">
     <div class="text-center">
-        <h1 class="text-3xl font-semibold tracking-widest text-gray-700">Paiement</h1>
+        <h1 class="text-3xl font-semibold text-white tracking-widest ">Paiement</h1>
     </div>
 
-    <div class="relative border-2 rounded-lg bg-white px-6 py-8 shadow-md">
+    <div class="relative border-2 rounded-lg bg-white px-8 py-10 shadow-md">
         <div class="mb-4">
             <h2 class="text-lg font-semibold text-gray-800">Liste des produits</h2>
         </div>
@@ -47,14 +47,16 @@ $paiementMethod = [
                 ?>
             </ul>
         </div>
-
-        <div class="mt-8 flex justify-end gap-4">
-            <button class="bg-stone-600 hover:bg-stone-700 focus:ring-stone-500 <?= $btnClass; ?>" id="_discard">
-                Annuler et enregistrer la liste
-            </button>
-            <button class="bg-green-600 hover:bg-green-700 focus:ring-green-500 <?= $btnClass; ?>">
-                Valider
-            </button>
+        <!-- Boutons -->
+        <div class="mt-8 flex justify-end ">
+            <div class="flex space-x-2">
+                <button class="bg-stone-600 hover:bg-stone-700 focus:ring-stone-500 <?= $btnClass; ?>" id="_discard">
+                    Annuler et enregistrer la liste
+                </button>
+                <button class="bg-green-600 hover:bg-green-700 focus:ring-green-500 <?= $btnClass; ?>">
+                    Valider
+                </button>
+            </div>
         </div>
     </div>
 </div>
