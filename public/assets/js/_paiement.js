@@ -6,12 +6,12 @@ let totalArray = [];
 
 let articles = window.articles;
 let articlesChecked = JSON.parse(window.localStorage.getItem("_iTem_"));
-if(container && articles){
+if (container && articles) {
     let i = 0;
     let html = "";
     Object.values(articles).map(arti => {
         articlesChecked.map(artiCh => {
-            if(Number(artiCh) === Number(arti.id)){
+            if (Number(artiCh) === Number(arti.id)) {
                 totalArray.push(Number(arti.prix));
                 i++;
                 html += `
@@ -20,18 +20,18 @@ if(container && articles){
                 <div>
                     <img src="/${arti.image_url}" class="w-8 h-8"/>
                 </div>
-                <span class="text-green-500">${arti.prix} €</span>
+                <span class="text-end text-green-500">${arti.prix} €</span>
                 </div>`
             }
         })
-        
+
     })
     container.innerHTML = html;
-    let totalPrice = totalArray.reduce((acc, value) => acc + value ,0);
+    let totalPrice = totalArray.reduce((acc, value) => acc + value, 0);
     totalAff.textContent = totalPrice.toFixed(2) + "€";
 }
 
-if(btnAnnul){
+if (btnAnnul) {
     btnAnnul.addEventListener("click", () => {
         window.localStorage.removeItem("_iTem_");
         window.location.replace("/articles");

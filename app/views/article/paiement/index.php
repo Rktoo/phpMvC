@@ -26,7 +26,7 @@ $paiementMethod = [
 
         <div class="flex justify-end items-center gap-4 mt-4">
             <p class="underline font-semibold text-gray-700">Total</p>
-            <span class="text-green-600 font-bold text-lg" id="_total"></span>
+            <span class="text-end text-green-600 font-bold text-lg" id="_total"></span>
         </div>
 
         <div class="mt-6">
